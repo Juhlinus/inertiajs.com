@@ -271,14 +271,6 @@ Inertia.post('/users', data, {
 })
 ```
 
-Returning `false` from the `onStart()` callback will cause the visit to be cancelled.
-
-```js
-Inertia.delete(`/users/${user.id}`, {
-  onStart: () => confirm('Are you sure you want to delete this user?'),
-})
-```
-
 It's also possible to return a promise from the `onSuccess()` callback. This will delay the "finish" event until the promise has resolved.
 
 ```js
